@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --primary: #3f9d43 !important;
+  --secondary: #525368 !important;
+  --light: rgb(232, 245, 233) !important;
+  --dark: rgba(37, 109, 74, 0.9) !important;
+  --gradient: linear-gradient(rgb(52, 142, 56, 0.9), rgba(16, 106, 66, 0.9));
+}
+
+* {
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+*::selection {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+footer a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+h3,
+.h3,
+h4,
+.h4,
+.fw-medium {
+  font-weight: 600 !important;
+}
+
+h5,
+.h5,
+h6,
+.h6,
+.fw-semi-bold {
+  font-weight: 500 !important;
+}
+
+.text-green {
+  color: var(--primary) !important;
+}
+
+.bg-green {
+  background-color: var(--primary);
+}
+
+.bg-lightgreen {
+  background-color: var(--light);
+}
+
+.bg-darkgreen {
+  background-color: var(--dark);
+}
+
+.bg-second {
+  background-color: var(--secondary);
+}
+
+/* Button */
+.btn {
+  transition: 0.5s;
+  font-weight: 500;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+  color: var(--light) !important;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
+
+/* Navbar */
+.navbar.sticky-top {
+  top: -100px;
+  transition: 0.5s;
+}
+
+.logo:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-brand,
+.navbar a.btn {
+  height: 80px;
+}
+
+.navbar .navbar-nav .nav-link {
+  padding: 25px 0;
+  color: var(--dark);
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.navbar .container-fluid {
+  padding-right: 0;
+}
+
+/* Header */
+header {
+  height: 60vh;
+}
+
+.carousel-caption {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(15, 66, 41, 0.6);
+  z-index: 10;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 15% !important;
+}
+
+@media (max-width: 700px) {
+  #header-carousel .carousel-item {
+    position: relative;
+    min-height: 450px;
+  }
+
+  #header-carousel .carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #header-carousel h1 {
+    font-size: 2rem;
+  }
+}
+
+/* highlight */
+@media (min-width: 991.98px) {
+  .highlight {
+    position: relative;
+    margin-top: -90px;
+    z-index: 1;
+  }
+}
+@media (max-width: 700px) {
+  .highlight h4 {
+    font-size: 1rem;
+  }
+}
+.highlight {
+  background: var(--gradient);
+}
+.keypoint {
+  background-color: #fff;
+}
+.keypoint:hover {
+  background-color: #b3eeb6;
+}
+.round {
+  width: 65px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: azure;
+  /* border: 1px solid var(--dark); */
+  margin-right: 10px;
+}
+
+/* expect  */
+.expect {
+  background-image: var(--gradient);
+}
+
+/* Service */
+.service-item {
+  position: relative;
+  text-align: center;
+}
+
+.service-item .service-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.service-item .service-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  transform: scale(1.2);
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.service-item:hover .service-img img {
+  transform: scale(1);
+}
+
+.service-item .service-text {
+  background: #ffffff;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.service-item:hover .service-text {
+  background: rgba(15, 66, 41, 0.6);
+}
+
+.service-item .service-text h4,
+.service-item .service-text p {
+  transition: 0.3;
+}
+
+.service-item:hover .service-text h4 {
+  color: #ffffff;
+}
+
+.service-item:hover .service-text p {
+  color: var(--light);
+}
+
+.service-item .service-text .btn-square {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  transition: 0.5s;
+}
+
+.service-item:hover .service-text .btn-square {
+  background: var(--light);
+}
+
+.service-item .service-text .btn {
+  width: 31px;
+  height: 31px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--dark);
+  background: var(--light);
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.service-item:hover .service-text .btn {
+  width: 112px;
+}
+
+/* Project Portfolio */
+
+.portfolio-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-inner::before,
+.portfolio-inner::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(15, 66, 41, 0.6);
+  transition: 0.5s;
+}
+
+.portfolio-inner::after {
+  left: auto;
+  right: 0;
+}
+
+.portfolio-inner:hover::before,
+.portfolio-inner:hover::after {
+  width: 50%;
+}
+
+.portfolio-inner .portfolio-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  z-index: 3;
+  opacity: 0;
+}
+
+.portfolio-inner:hover .portfolio-text {
+  transition-delay: 0.3s;
+  opacity: 1;
+}
+
+.portfolio-inner .portfolio-text .btn {
+  background: var(--light) !important;
+  color: var(--primary) !important;
+}
+
+.portfolio-inner .portfolio-text .btn:hover {
+  background: var(--primary) !important;
+  color: var(--light) !important;
+}
+
+.hero {
+  background-size: cover;
+  height: 40vh;
+}
+
+.navbar-brand h1 {
+  font-size: 2rem;
+  width: 50%;
+  padding: 10px;
+}

@@ -1,0 +1,196 @@
+{% extends 'main.html' %}{% load static %} {% block content %}
+
+<!--  Hero  -->
+<header
+  class="container-fluid hero py-5 mb-5"
+  style="
+    background: linear-gradient(rgba(15, 66, 41, 0.6), rgba(15, 66, 41, 0.6)),
+      url('{% static 'images/about.jpg' %}') center center no-repeat;
+    background-size: cover;
+  "
+>
+  <div class="container text-center py-5">
+    <h1 data-aos="fade-up" class="text-white mb-4">About Us</h1>
+    <p data-aos="fade-up" class="text-white">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, facere
+    </p>
+  </div>
+</header>
+
+<!-- About  -->
+<section class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-5 align-items-end">
+      <div class="col-lg-3 col-md-5">
+        <img class="img-fluid rounded" src="{% static 'images/care.jpg' %}" />
+      </div>
+      <div class="col-lg-6 col-md-7 mt-md-3">
+        <p class="text-green mb-4">Lawn Services in local</p>
+        <h1 class="display-5 mb-4">Lawn care made easy!</h1>
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          cumque, in aliquam officia culpa numquam distinctio accuuasi
+          cupiditate cumque.
+        </p>
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          cumqupiditate cumque.
+        </p>
+
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          cumque, in aliquam officia culpa numquam distinctio accuuasi
+          cupiditate cumque.
+        </p>
+
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          cumque, in aliquam officia culpa numquam distinctio accuuasi
+          cupiditate cumque.
+        </p>
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
+          tempora, minima deleniti itaque beatae illo quod possimus hic commodi
+          neque blanditiis nesciunt distinctio dolores, officia error corrupti
+          numquam perspiciatis provident laborum ex libero, maiores fugiat
+          cupiditate? Rerum blanditiis, labore temporibus est maxime dignissimos
+          architecto sed deserunt explicabo corrupti voluptas qui?
+        </p>
+
+        <a class="btn btn-primary py-3 px-4" href="{% url 'contact' %}"
+          >Contact Us for Details</a
+        >
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <div class="row g-5">
+          <div class="col-12 col-sm-6 col-lg-12">
+            <h1 class="display-2 text-green mb-0 text-right">#1</h1>
+            <p class="text-green mb-4 text-right">Lawn Services in local</p>
+
+            <div class="border-start ps-4">
+              <h4 class="mb-3 text-right text-green mt-3">Local Trust</h4>
+              <span
+                >Loresect dfm ipsum dolor sit, amet co sds snsect sect etur
+                adipisicing.</span
+              >
+            </div>
+
+            <div class="border-start ps-4">
+              <h4 class="mb-3 text-right text-green mt-3">Green Technology</h4>
+              <span
+                >Loresect dfm ipsum dolor sit, amet co sds snsect sect etur
+                adipisicing.</span
+              >
+            </div>
+
+            <div class="border-start ps-4">
+              <h4 class="mb-3 text-right text-green mt-3">Best Lawn Care</h4>
+              <span
+                >Loresect dfm ipsum dolor sit, amet co sds snsect sect etur
+                adipisicing.</span
+              >
+            </div>
+
+            <div class="border-start ps-4">
+              <h4 class="mb-3 text-right text-green mt-3">
+                Green Business philosophy
+              </h4>
+              <span
+                >Loresect dfm ipsum dolor sit, amet co sds snsect sect etur
+                adipisicing.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects  -->
+<section class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto" style="max-width: 500px">
+      <p class="fs-5 fw-bold text-green">Our Projects</p>
+      <h1 class="display-5 mb-5">Our Amazing Projects</h1>
+    </div>
+
+    <div class="row g-4">
+      <!-- each project   -->
+
+      <div class="col-lg-6 col-md-6 portfolio-item mt-md-3">
+        <div class="portfolio-inner rounded">
+          <img
+            class="img-fluid"
+            src="{% static 'images/project.jpg' %}"
+            alt=""
+          />
+          <div class="portfolio-text">
+            <h4 class="text-white mb-4 m-5">project 1</h4>
+            <p class="text-white mb-4 m-3">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
+              eveniet qui rem commodi debitis reprehenderit dicta minus vel
+              molestias nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 portfolio-item mt-md-3">
+        <div class="portfolio-inner rounded">
+          <img
+            class="img-fluid"
+            src="{% static 'images/project2.jpg' %}"
+            alt=""
+          />
+          <div class="portfolio-text">
+            <h4 class="text-white mb-4 m-5">project 2</h4>
+            <p class="text-white mb-4 m-3">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
+              debitis reprehenderit dicta minus vel molestias nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 portfolio-item mt-md-3">
+        <div class="portfolio-inner rounded">
+          <img
+            class="img-fluid"
+            src="{% static 'images/project3.jpg' %}"
+            alt=""
+          />
+          <div class="portfolio-text">
+            <h4 class="text-white mb-4 m-5">project 3</h4>
+            <p class="text-white mb-4 m-3">
+              Lorem ipsum dolor, ssicing elit. Sapiente eveniet qui rem commodi
+              debitis reprehenderit dicta minus vel molestias nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 portfolio-item mt-md-3">
+        <div class="portfolio-inner rounded">
+          <img
+            class="img-fluid"
+            src="{% static 'images/project4.jpg' %}"
+            alt=""
+          />
+          <div class="portfolio-text">
+            <h4 class="text-white mb-4 m-5">project 4</h4>
+            <p class="text-white mb-4 m-3">
+              Lorem ipsum dolor, ssicing elit. Sapiente eveniet qui rem commodi
+              debitis reprehenderit dicta minus vel molestias nulla. Lorem ipsum
+              dolor sit, amet consectetur adipisicing elit. Repellat provident
+              eaque rerum veritatis sit nam quo officiis rem voluptates eos
+              assumenda neque consectetur cum, consequatur, nihil qui doloremque
+              deserunt reiciendis!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

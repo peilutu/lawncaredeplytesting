@@ -1,0 +1,186 @@
+{% extends 'main.html' %}{% load static %} {% block content %}
+
+<header
+  class="container-fluid hero py-5 mb-5"
+  style="
+    background: linear-gradient(rgba(15, 66, 41, 0.6), rgba(15, 66, 41, 0.6)),
+      url('{% static 'images/payment.jpg' %}') center center no-repeat;
+    background-size: cover;
+  "
+>
+  <div class="container text-center py-5">
+    <h1 data-aos="fade-up" class="text-white mb-4">Payment</h1>
+    <p data-aos="fade-up" class="text-white">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, facere
+    </p>
+  </div>
+</header>
+
+<section class="container section">
+  <div class="row">
+    <div class="form-wrapper col-md-6 p-4 p-md-5 " 
+    >
+      <form action="#" method="POST">
+        {% csrf_token %}
+        <h1 class="display-5 mb-2">Pay Your Bills</h1>
+
+        <p class="mb-5">Make your payments securely online!</p>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="payment-name"
+            placeholder="Your Name"
+            required="required"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            name="payment-email"
+            placeholder="Email"
+            required="required"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="payment-phone"
+            placeholder="Phone#"
+            required="required"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="payment-invoice"
+            placeholder="Invoice# (Optional)"
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            id=""
+            cols="30"
+            rows="7"
+            class="form-control"
+            name="payment-message"
+            placeholder="Payment Notes (Optional)"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="payment-amount"
+            placeholder="Enter the amount you want to pay"
+            required="required"
+            onkeyup="value=value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="submit"
+            class="btn btn-primary py-3 px-5"
+            name="submit"
+            id="payment"
+            value="Continue"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="confirm-wrapper col-md-6 p-4 p-md-5 text-light " style="
+    background: linear-gradient(rgba(15, 66, 41, 0.6), rgba(15, 66, 41, 0.6)),
+      url('{% static 'images/payment2.jpg' %}') center center no-repeat;
+    background-size: cover;
+  "
+    '>
+      {% if payment_name %}
+      <h3>Please confirm your information:</h3>
+      <p>Name: {{ payment_name }}</p>
+      <p>Payment Amount: ${{ payment_amount }}</p>
+      <p>Email: {{ payment_email }}</p>
+      <p>Phone#: {{ payment_phone }}</p>
+      <p>Invoice#: {{ payment_invoice }}</p>
+      <!-- <p>Notes: {{ payment_message }}</p> -->
+
+      <br />
+      <hr />
+      <h5>Make Payment:</h5>
+      <br />
+      <!-- Set up a container element for the button -->
+      <div id="paypal-button-container"></div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<script>
+  var form = document.getElementById("form");
+  var amount = "{{ payment_amount }}";
+  var name = "{{ payment_name }}";
+  var email = "{{ payment_email }}";
+  var phone = "{{ payment_phone }}";
+  var invoice = "{{ payment_invoice }}";
+  var message = "{{ payment_message }}";
+</script>
+
+<!-- Include the PayPal JavaScript SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD&disable-funding=credit"></script>
+<script>
+  // Render the PayPal button into #paypal-button-container
+  paypal
+    .Buttons({
+      // Set up the transaction
+      createOrder: function (data, actions) {
+        return actions.order.create({
+          purchase_units: [
+            {
+              amount: {
+                value: parseFloat(amount).toFixed(2),
+              },
+            },
+          ],
+        });
+      },
+
+      // Finalize the transaction
+      onApprove: function (data, actions) {
+        return actions.order.capture().then(function (orderData) {
+          processPayment();
+          //   alert("Thank you for the payment! ");
+        });
+      },
+    })
+    .render("#paypal-button-container");
+
+  function processPayment() {
+    var formData = {
+      name: name,
+      amount: amount,
+      phone: phone,
+      email: email,
+      invoice: invoice,
+      message: message,
+    };
+    url = "/process_payment/";
+
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-CSRFToken": csrftoken },
+      body: JSON.stringify({ form: formData }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Data:", data);
+        alert("Thank you for your payment!");
+
+        window.location.href = "{% url 'home' %}";
+      });
+  }
+</script>
+{% endblock %}

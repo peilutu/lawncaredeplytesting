@@ -1,0 +1,456 @@
+{% extends 'main.html' %}{% load static %} {% block content %}
+
+<!-- hero  -->
+<section class="container-fluid p-0">
+  <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="w-100" src="./images/home.jpg" alt="Image" />
+
+        <div class="carousel-caption">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <h1 data-aos="fade-up" class="display-1 text-white mb-5">
+                  Beautiful Lawns Start Here!
+                </h1>
+                <a
+                  href="{% url 'about'%}"
+                  class="btn btn-primary py-sm-3 px-sm-4"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="w-100" src="images/home2.jpg" alt="Image" />
+        <div class="carousel-caption">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-7">
+                <h1 data-aos="fade-up" class="display-3 text-white mb-5">
+                  Best lawn ever. Guaranteed.
+                </h1>
+                <a
+                  href="{% url 'about'%}"
+                  class="btn btn-primary py-sm-3 px-sm-4"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a
+      class="carousel-control-prev"
+      role="button"
+      data-target="#header-carousel"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a
+      class="carousel-control-next"
+      role="button"
+      data-target="#header-carousel"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+</section>
+
+<!-- highlight  -->
+<div class="container-fluid bg-darkgreen highlight">
+  <div class="row px-5">
+    <div class="col-lg-4 p-3">
+      <div
+        class="keypoint d-flex rounded align-items-center h-100 px-5 pt-md-4 pb-md-4"
+        style="min-height: 10px"
+      >
+        <div class="d-flex">
+          <div class="flex-shrink-0 btn-lg-square round">
+            <i class="fa fa-check text-green"></i>
+          </div>
+          <div class="ps-4">
+            <h4>Trust team</h4>
+            <span>Lorem ipsum dolor sconsect amet consectetur </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 p-3">
+      <div
+        class="keypoint d-flex rounded align-items-center h-100 px-5 pt-md-4 pb-md-4"
+        style="min-height: 10px"
+      >
+        <div class="d-flex">
+          <div class="flex-shrink-0 btn-lg-square round">
+            <i class="fa fa-check text-green"></i>
+          </div>
+          <div class="ps-4">
+            <h4>Tailored Solutions</h4>
+            <span>Lorem ipsum dolor sconsect amet consectetur </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 p-3">
+      <div
+        class="keypoint d-flex rounded align-items-center h-100 px-5 pt-md-4 pb-md-4"
+        style="min-height: 10px"
+      >
+        <div class="d-flex">
+          <div class="flex-shrink-0 btn-lg-square round">
+            <i class="fa fa-check text-green"></i>
+          </div>
+          <div class="ps-4">
+            <h4>Guaranteed Results</h4>
+            <span>Lorem ipsum dolor sconsect amet consectetur </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About  -->
+<section class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-5 align-items-end">
+      <div class="col-lg-3 col-md-5">
+        <img class="img-fluid rounded" src="images/care.jpg" />
+      </div>
+      <div class="col-lg-6 col-md-7 mt-md-3">
+        <p class="text-green mb-4">Lawn Services in local</p>
+        <h1 class="display-5 mb-4">Lawn care made easy!</h1>
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          cumque, in aliquam officia culpa numquam distinctio accuuasi
+          cupiditate cumque.
+        </p>
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          cumqupiditate cumque.
+        </p>
+
+        <a class="btn btn-primary py-3 px-4" href="{% url 'contact'%}"
+          >Contact Us for Details</a
+        >
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <div class="row g-5">
+          <div class="col-12 col-sm-6 col-lg-12">
+            <h1 class="display-2 text-green mb-0 text-right">#1</h1>
+            <p class="text-green mb-4 text-right">Lawn Services in local</p>
+
+            <div class="border-start ps-4">
+              <h4 class="mb-3 text-right text-green">Local Trust</h4>
+              <span
+                >Lorem ipsum dolor sit, amet adipisicing elit. Nihil,
+                sapiente.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- expect  -->
+<section class="container-fluid expect my-5 py-5 mt-5">
+  <div data-aos="fade-up" class="container py-5">
+    <h2 class="text-white">What to expect</h2>
+    <span class="fs-5 fw-semi-bold text-light"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, fuga
+      necessitatibus nobis amet eligendi veniam adipisci perferendis minima
+      debitis officia! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Aut dicta facere quia possimus delectus! Lorem ipsum dolor sit.</span
+    >
+  </div>
+</section>
+
+<!-- Service  -->
+<section class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto" style="max-width: 500px">
+      <p class="fs-5 fw-bold text-green">Our Services</p>
+      <h1 class="display-5 mb-5">
+        Make Every Inch of Your Yard Green And Healthy
+      </h1>
+    </div>
+
+    <div class="row g-4">
+      <!-- each services  -->
+
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item rounded d-flex h-100">
+          <div class="service-img rounded">
+            <img class="img-fluid" src="./images/services.jpg" alt="" />
+          </div>
+          <div class="service-text rounded p-5">
+            <div class="btn-square rounded-circle mx-auto mb-3">
+              <i class="fa-solid img-fluid fa-seedling fa-xl"></i>
+            </div>
+            <h4 class="mb-3">Lawn Caring</h4>
+            <p class="mb-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item rounded d-flex h-100">
+          <div class="service-img rounded">
+            <img class="img-fluid" src="./images/services.jpg" alt="" />
+          </div>
+          <div class="service-text rounded p-5">
+            <div class="btn-square rounded-circle mx-auto mb-3">
+              <i class="fa-solid img-fluid fa-seedling fa-xl"></i>
+            </div>
+            <h4 class="mb-3">Feritilization</h4>
+            <p class="mb-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item rounded d-flex h-100">
+          <div class="service-img rounded">
+            <img class="img-fluid" src="./images/services.jpg" alt="" />
+          </div>
+          <div class="service-text rounded p-5">
+            <div class="btn-square rounded-circle mx-auto mb-3">
+              <i class="fa-solid img-fluid fa-seedling fa-xl"></i>
+            </div>
+            <h4 class="mb-3">Weed Control</h4>
+            <p class="mb-4">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-md-4">
+      <!-- each services  -->
+
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item rounded d-flex h-100">
+          <div class="service-img rounded">
+            <img class="img-fluid" src="./images/services.jpg" alt="" />
+          </div>
+          <div class="service-text rounded p-5">
+            <div class="btn-square rounded-circle mx-auto mb-3">
+              <i class="fa-solid img-fluid fa-seedling fa-xl"></i>
+            </div>
+            <h4 class="mb-3">Pest Control</h4>
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item rounded d-flex h-100">
+          <div class="service-img rounded">
+            <img class="img-fluid" src="./images/services.jpg" alt="" />
+          </div>
+          <div class="service-text rounded p-5">
+            <div class="btn-square rounded-circle mx-auto mb-3">
+              <i class="fa-solid img-fluid fa-seedling fa-xl"></i>
+            </div>
+            <h4 class="mb-3">Tree Care</h4>
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+              aliquid.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item rounded d-flex h-100">
+          <div class="service-img rounded">
+            <img class="img-fluid" src="./images/services.jpg" alt="" />
+          </div>
+          <div class="service-text rounded p-5">
+            <div class="btn-square rounded-circle mx-auto mb-3">
+              <i class="fa-solid img-fluid fa-seedling fa-xl"></i>
+            </div>
+            <h4 class="mb-3">Drainage</h4>
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects  -->
+<section class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto" style="max-width: 500px">
+      <p class="fs-5 fw-bold text-green">Our Projects</p>
+      <h1 class="display-5 mb-5">Our Amazing Projects</h1>
+    </div>
+
+    <div class="row g-4">
+      <!--  each project  -->
+
+      <div class="col-lg-6 col-md-6 portfolio-item mt-md-3">
+        <div class="portfolio-inner rounded">
+          <img
+            class="img-fluid"
+            src="{% static 'images/project.jpg' %}"
+            alt=""
+          />
+          <div class="portfolio-text">
+            <h4 class="text-white mb-4 m-5">project 1</h4>
+            <p class="text-white mb-4 m-3">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
+              eveniet qui rem commodi debitis reprehenderit dicta minus vel
+              molestias nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 portfolio-item mt-md-3">
+        <div class="portfolio-inner rounded">
+          <img
+            class="img-fluid"
+            src="{% static 'images/project2.jpg' %}"
+            alt=""
+          />
+          <div class="portfolio-text">
+            <h4 class="text-white mb-4 m-5">project 2</h4>
+            <p class="text-white mb-4 m-3">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
+              debitis reprehenderit dicta minus vel molestias nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 portfolio-item mt-md-3">
+        <div class="portfolio-inner rounded">
+          <img
+            class="img-fluid"
+            src="{% static 'images/project3.jpg' %}"
+            alt=""
+          />
+          <div class="portfolio-text">
+            <h4 class="text-white mb-4 m-5">project 3</h4>
+            <p class="text-white mb-4 m-3">
+              Lorem ipsum dolor, ssicing elit. Sapiente eveniet qui rem commodi
+              debitis reprehenderit dicta minus vel molestias nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 portfolio-item mt-md-3">
+        <div class="portfolio-inner rounded">
+          <img
+            class="img-fluid"
+            src="{% static 'images/project4.jpg' %}"
+            alt=""
+          />
+          <div class="portfolio-text">
+            <h4 class="text-white mb-4 m-5">project 4</h4>
+            <p class="text-white mb-4 m-3">
+              Lorem ipsum dolor, ssicing elit. Sapiente eveniet qui rem commodi
+              debitis reprehenderit dicta minus vel molestias nulla. Lorem ipsum
+              dolor sit, amet consectetur adipisicing elit. Repellat provident
+              eaque rerum veritatis sit nam quo officiis rem voluptates eos
+              assumenda neque consectetur cum, consequatur, nihil qui doloremque
+              deserunt reiciendis!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial  -->
+<section class="container-xxl py-5 mt-5">
+  <div class="container">
+    <div class="text-center">
+      <p class="text-green">Testimonial</p>
+      <h1 class="mb-3">Millions of Happy Customers!</h1>
+      <p class="mb-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe
+        voluptas excerendis illo exercitationem natus qui molestias.
+      </p>
+    </div>
+
+    <div class="col-lg-12 mt-5">
+      <div class="owl-carousel testimonial-carousel owl-theme">
+        <div class="testimonial-item">
+          <img
+            class="img-fluid rounded mb-3"
+            src="images/customer-1.png"
+            alt=""
+          />
+          <p class="fs-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
+            ut si nonem. Reiciendis.
+          </p>
+          <h4>David</h4>
+          <span>Manager</span>
+        </div>
+
+        <div class="testimonial-item">
+          <img
+            class="img-fluid rounded mb-3"
+            src="images/customer-3.png
+                "
+            alt=""
+          />
+          <p class="fs-5">
+            Dolores sed duo clita tempor justo dolor et stet lorem kasd labore
+            dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et
+            tempor diam tempor erat.
+          </p>
+          <h4>Bob</h4>
+          <span>Manager</span>
+        </div>
+
+        <div class="testimonial-item">
+          <img
+            class="img-fluid rounded mb-3"
+            src="images/customer-2.png"
+            alt=""
+          />
+          <p class="fs-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+            corporis magnam totam a cupiditate quisquam beatae tempore culpa
+            repellat est.
+          </p>
+          <h4>Alice</h4>
+          <span>Manager</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contact  -->
+<section class="container-fluid bg-darkgreen mt-5">
+  <div data-aos="fade-left" class="container">
+    <a class="text-white text-right" href="{% url 'contact' %}">
+      <p><i class="fa-solid fa-leaf"></i> Contact Us For A Quote Now!</p>
+    </a>
+  </div>
+</section>
+
+{% endblock content %}

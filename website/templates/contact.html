@@ -1,0 +1,110 @@
+{% extends 'main.html' %}{% load static %} {% block content %}
+<header
+  class="container-fluid hero py-5 mb-5"
+  style="
+    background: linear-gradient(rgba(15, 66, 41, 0.6), rgba(15, 66, 41, 0.6)),
+      url('{% static 'images/contact.jpg'%}') center center no-repeat;
+    background-size: cover;
+  "
+>
+  <div class="container text-center py-5">
+    <h1 data-aos="fade-up" class="text-white mb-4">Contact Us</h1>
+    <p data-aos="fade-up" class="text-white">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, facere
+    </p>
+  </div>
+</header>
+
+<section class="container-xxl">
+  {% if message_name %}
+  <div class="row justify-content-center mb-5 pb-2">
+    <div class="col-md-8 text-center heading-section">
+      <h2 class="mb-4">Thank you!</h2>
+      <p>We received your message and we'll contact you soon!</p>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- contact form  -->
+  <div class="container">
+    <div class="row justify-content-center pt-5 pb-5">
+      <div
+        class="col-md-9 p-6 p-md-5 text-light"
+        style="
+          background: linear-gradient(
+              rgba(15, 66, 41, 0.6),
+              rgba(15, 66, 41, 0.6)
+            ),
+            url('{% static 'images/contact2.jpg' %}') center center no-repeat;
+          background-size: cover;
+        "
+      >
+        <form class="p-5" action="#" method="POST">
+          {% csrf_token %}
+          <h3 class="fs-5 fw-bold text-green">Hear from you</h3>
+          <h1 class="display-5 mb-5">Contact Us For A Quote</h1>
+
+          <p class="mb-5">
+            To get a quote for lawncare service, or for any query, enter your
+            information or questions below
+          </p>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="message-name"
+              placeholder="Your Name"
+              required="required"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="message-phone"
+              placeholder="Your Phone"
+              required="required"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              name="message-email"
+              placeholder="Your Email"
+              required="required"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="message-subject"
+              placeholder="Enter your home address"
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              name="message"
+              id=""
+              cols="30"
+              rows="7"
+              class="form-control"
+              placeholder="Message "
+              required="required"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <input
+              type="submit"
+              value="Send Message"
+              class="btn btn-primary py-3 px-5"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
