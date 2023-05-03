@@ -61,6 +61,7 @@ TEMPLATES = [
     },
 ]
 
+#gunicorn is going to help us with this wsgi sort of bridging. 
 WSGI_APPLICATION = 'lawncare.wsgi.application'
 
 
